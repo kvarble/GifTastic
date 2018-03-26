@@ -6,17 +6,35 @@
     margin: 20px;
     border-radius: 5px;
     margin-left: 30px;
+    font-family: 'Bangers', cursive;
+    font-size: 20px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.weather-form {
+    font-family: 'Bangers', cursive;
+    font-size: 30px;
+    /* margin-right: 10px; */
+    display: inline-block;
+}
+.col-3 {
+    margin-right: 10px;
 }
 
 #weather-input {
     border-radius: 5px;
+    font-family: 'Bangers', cursive;
+    display: inline-block;
 }
 
 .weather-btn {
+    background: url(../images/cloud2.jpg);
     margin: 5px;
     border-radius: 5px;
     background-color: midnightblue;
     color: whitesmoke;
+    font-family: 'Bangers', cursive;
+    font-size: 20px;
 }
 
 .container {
@@ -26,4 +44,17 @@
 
 body {
     background-color: lightblue;
+}
+#gifs-appear-here {
+    display: inline-block;
+}
+.clouds {
+    display: inline-block;
+    height: 150%;
+}
+#horizantal {
+ width: 100%;
+ border-top: 5px solid midnightblue;
+ position: absolute;
+ margin-top: 10px;
 }

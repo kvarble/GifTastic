@@ -20,13 +20,31 @@ function showWeather(){
 
             var weatherImage = $("<img>");
             weatherImage.attr("src", results[i].images.fixed_height_still.url);
+            weatherImage.attr("data-still", results[i].images.fixed_height_still.url);
+            weatherImage.attr("data-animate", results[i].images.fixed_height.url);
+            weatherImage.attr("dataAnimated", false);
             weatherDiv.append(p);
             weatherDiv.append(weatherImage);
             $("#gifs-appear-here").prepend(weatherDiv);
+            console.log(weatherImage);
         }
+        $("img").on("click", function() {
+            console.log(100);
+            console.log($(this).attr("dataAnimated"));
+            var state = $(this).attr("dataAnimated");
+            console.log(state)
+            if (state==="false") {
+                $(this).attr("src", $(this).attr("data-animate"));
+                $(this).attr("dataAnimated", true);
         
+            } else {
+                $(this).attr("src", $(this).attr("data-still"));
+                $(this).attr("dataAnimated", false);
+            }
+        });
         });
     }
+
         function makeButtons(){
             $("#buttons-view").empty();
             for (var i = 0; i < weatherArray.length; i++){
@@ -47,6 +65,8 @@ function showWeather(){
     $(document).on("click", ".weather-btn", showWeather);
 
     makeButtons();
+
+    
 
 
 
